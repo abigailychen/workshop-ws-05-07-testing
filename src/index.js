@@ -24,7 +24,7 @@ class App extends Component {
     search = (text) => {
       youtubeSearch(text).then((videos) => {
         this.setState({
-          videos,
+		videos: videos.all,
           selectedVideo: videos[0],
         });
       });
